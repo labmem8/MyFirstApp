@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
             MyFirstAppTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-                    Greeting("Android")
+                    Message("Let's go!")
                 }
             }
         }
@@ -31,6 +31,14 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
             text = "Hello $name!",
             modifier = modifier
+    )
+}
+
+@Composable
+fun Message(text: String, modifier: Modifier = Modifier){
+    Text(
+        text="This is my first GitHub project! $text",
+        modifier = modifier
     )
 }
 
